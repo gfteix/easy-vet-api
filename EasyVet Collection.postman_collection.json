@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "5cf5ee00-cdf4-4a9f-ae04-4b4558b6a00c",
+		"name": "EasyVet Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17435532"
+	},
+	"item": [
+		{
+			"name": "Get Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Veterinario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/veterinario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"veterinario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Animal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/animal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"animal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Consulta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"consulta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Cliente Nome\",\n    \"email\": \"email@email.com\",\n    \"endereco\": {\n        \"rua\": \"rua 1\",\n        \"bairro\": \"bairro 1\",\n        \"cidade\": \"cidade 1\",\n        \"pais\": \"pais 1\",\n        \"estado\": \"estado 1\",\n        \"cep\": \"00000\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Animal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Animal Nome\",\n    \"especie\": \"especie\",\n    \"raca\": \"raca\",\n    \"peso\": 20,\n    \"porte\": \"medio\",\n    \"cliente\": {\n        \"id\": 1\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/animal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"animal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Veterinario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Veterinario Nome\",\n    \"email\": \"email@email.com\",\n    \"especialidades\": \"Ortopedia, Oftalmologia\",\n    \"especies\": \"Cachorro, Gato\",\n    \"atendeDomicilio\": false,\n    \"atendeEmergencia\": false,\n    \"endereco\": {\n        \"rua\": \"rua 1\",\n        \"bairro\": \"bairro 1\",\n        \"cidade\": \"cidade 1\",\n        \"pais\": \"pais 1\",\n        \"estado\": \"estado 1\",\n        \"cep\": \"00000\"\n    }\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/veterinario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"veterinario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Consulta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"descricao\": \"descricao\",\n   \"domicilio\": false,\n   \"emergencia\": false,\n   \"preco\": 80,\n   \"data\": \"2023-09-01\",\n   \"cancelado\": null,\n   \"motivoCancelamento\": null,\n   \"horarioInicio\": \"2023-09-26T09:00:00.199+00:00\",\n   \"horarioFim\": \"2023-09-26T09:30:00.199+00:00\",\n   \"cliente\": {\n       \"id\": 1\n   },\n   \"veterinario\": {\n       \"id\": 1\n   },\n   \"animal\": {\n       \"id\": 2\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"consulta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/cliente/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Animal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/animal/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"animal",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Veterinario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/veterinario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"veterinario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Consulta",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/consulta/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"consulta",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Cliente Nome\",\n    \"email\": \"email@email.com\",\n    \"endereco\": {\n        \"rua\": \"rua 1\",\n        \"bairro\": \"bairro 1\",\n        \"cidade\": \"cidade 1\",\n        \"pais\": \"pais 1\",\n        \"estado\": \"estado 1\",\n        \"cep\": \"00000\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/cliente/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"cliente",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Animal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Animal Nome\",\n    \"especie\": \"especie\",\n    \"raca\": \"raca\",\n    \"peso\": 20,\n    \"porte\": \"medio\",\n    \"id_cliente\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/animal/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"animal",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Veterinario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"Veterinario Nome\",\n    \"email\": \"email@email.com\",\n    \"especialidades\": \"Ortopedia, Oftalmologia\",\n    \"especies\": \"Cachorro, Gato\",\n    \"atendeDomicilio\": false,\n    \"atendeEmergencia\": false,\n    \"endereco\": {\n        \"rua\": \"rua 1\",\n        \"bairro\": \"bairro 1\",\n        \"cidade\": \"cidade 1\",\n        \"pais\": \"pais 1\",\n        \"estado\": \"estado 1\",\n        \"cep\": \"00000\"\n    }\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/veterinario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"veterinario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Consulta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"descricao\": \"descricao\",\n   \"domicilio\": false,\n   \"emergencia\": false,\n   \"preco\": 80,\n   \"data\": \"2023-09-01\",\n   \"cancelado\": null,\n   \"motivoCancelamento\": null,\n   \"horarioInicio\": \"2023-09-26T09:00:00.199+00:00\",\n   \"horarioFim\": \"2023-09-26T09:30:00.199+00:00\",\n   \"cliente\": {\n       \"id\": 1\n   },\n   \"veterinario\": {\n       \"id\": 1\n   },\n   \"animal\": {\n       \"id\": 2\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/consulta/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"consulta",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
